@@ -1,0 +1,497 @@
+/* Roboto-Black */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../font/Roboto/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Roboto-BlackItalic */
+@font-face {
+  font-family: 'Roboto';
+       src: url('../font/Roboto/Roboto-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Roboto-Bold */
+@font-face {
+  font-family: 'Roboto';
+       src:url('../font/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Roboto-BoldItalic */
+@font-face {
+  font-family: 'Roboto';
+       src:  url('../font/Roboto/Roboto-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Roboto-Italic */
+@font-face {
+  font-family: 'Roboto';
+       src:  url('../font/Roboto/Roboto-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Roboto-Light */
+@font-face {
+  font-family: 'Roboto';
+       src: url('../font/Roboto/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Roboto-LightItalic */
+@font-face {
+  font-family: 'Roboto';
+       src: url('../font/Roboto/Roboto-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Roboto-Medium */
+@font-face {
+  font-family: 'Roboto';
+       src: url('../font/Roboto/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Roboto-MediumItalic */
+@font-face {
+  font-family: 'Roboto';
+       src: url('../font/Roboto/Roboto-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Roboto-Regular */
+@font-face {
+  font-family: 'Roboto';
+       src: url('../font/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Roboto-Thin */
+@font-face {
+  font-family: 'Roboto';
+       src: url('../font/Roboto/Roboto-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Roboto-ThinItalic */
+@font-face {
+  font-family: 'Roboto';
+       src: url('../font/Roboto/Roboto-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Roboto';
+       src: url('../font/Roboto/Roboto-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-MediumItalic.eot');
+  src: local('Bagoss Standard TRIAL Medium Italic'), local('BagossStandardTRIAL-MediumItalic'),
+      url('../font/Bagos/BagossStandardTRIAL-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-MediumItalic.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-MediumItalic.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-Medium.eot');
+  src: local('Bagoss Standard TRIAL Medium'), local('BagossStandardTRIAL-Medium'),
+      url('../font/Bagos/BagossStandardTRIAL-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-Medium.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-Medium.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-LightItalic.eot');
+  src: local('Bagoss Standard TRIAL Light Italic'), local('BagossStandardTRIAL-LightItalic'),
+      url('../font/Bagos/BagossStandardTRIAL-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-LightItalic.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-LightItalic.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-BoldItalic.eot');
+  src: local('Bagoss Standard TRIAL Bold Italic'), local('BagossStandardTRIAL-BoldItalic'),
+      url('../font/Bagos/BagossStandardTRIAL-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-BoldItalic.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-BoldItalic.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-Bold.eot');
+  src: local('Bagoss Standard TRIAL Bold'), local('BagossStandardTRIAL-Bold'),
+      url('../font/Bagos/BagossStandardTRIAL-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-Bold.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-Bold.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-Light.eot');
+  src: local('Bagoss Standard TRIAL Light'), local('BagossStandardTRIAL-Light'),
+      url('../font/Bagos/BagossStandardTRIAL-Light.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-Light.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-Light.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-SemiBold.eot');
+  src: local('Bagoss Standard TRIAL SemiBold'), local('BagossStandardTRIAL-SemiBold'),
+      url('../font/Bagos/BagossStandardTRIAL-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-SemiBold.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-SemiBold.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-ThinItalic.eot');
+  src: local('Bagoss Standard TRIAL Thin Italic'), local('BagossStandardTRIAL-ThinItalic'),
+      url('../font/Bagos/BagossStandardTRIAL-ThinItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-ThinItalic.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-ThinItalic.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-Thin.eot');
+  src: local('Bagoss Standard TRIAL Thin'), local('BagossStandardTRIAL-Thin'),
+      url('../font/Bagos/BagossStandardTRIAL-Thin.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-Thin.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-Thin.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-RegularItalic.eot');
+  src: local('Bagoss Standard TRIAL Regular Italic'), local('BagossStandardTRIAL-RegularItalic'),
+      url('../font/Bagos/BagossStandardTRIAL-RegularItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-RegularItalic.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-RegularItalic.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-Regular.eot');
+  src: local('Bagoss Standard TRIAL Regular'), local('BagossStandardTRIAL-Regular'),
+      url('../font/Bagos/BagossStandardTRIAL-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-Regular.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-Regular.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagos';
+  src: url('../font/Bagos/BagossStandardTRIAL-SemiBoldItalic.eot');
+  src: local('Bagoss Standard TRIAL SemiBold Italic'), local('BagossStandardTRIAL-SemiBoldItalic'),
+      url('../font/Bagos/BagossStandardTRIAL-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Bagos/BagossStandardTRIAL-SemiBoldItalic.woff2') format('woff2'),
+      url('../font/Bagos/BagossStandardTRIAL-SemiBoldItalic.woff') format('woff'),
+      url('../font/Bagos/BagossStandardTRIAL-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
+:root {
+    /* Font sizes */
+    --font-size-small: 12px;
+    --font-size-normal: 16px;
+    --font-size-medium: 18px;
+    --font-size-large: 24px;
+    --font-size-h1: 36px;
+    --font-size-h2: 28px;
+    --font-size-h3: 24px;
+    --font-size-h4: 20px;
+    --font-size-h5: 18px;
+    --font-size-h6: 16px;
+
+    /* Button sizes */
+    --button-height-small: 32px;
+    --button-height-medium: 40px;
+    --button-height-large: 48px;
+    --button-padding-small: 8px 16px;
+    --button-padding-medium: 10px 20px;
+    --button-padding-large: 12px 24px;
+
+    /* Icon sizes */
+    --icon-size-small: 16px;
+    --icon-size-medium: 24px;
+    --icon-size-large: 48px;
+
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-xlarge: 32px;
+
+    /* Border radius */
+    --border-radius-small: 4px;
+    --border-radius-medium: 8px;
+    --border-radius-large: 12px;
+
+    /* Line heights */
+    --line-height-body: 1.5;
+    --line-height-heading: 1.2;
+
+    /* Font */
+    --font-body: 'Roboto', sans-serif;
+    --font-heading: 'Bagos', sans-serif; ;
+}
+
+
+*{
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html, body {
+    height: 100%;
+    font-size: var(--font-size-normal);
+    line-height: var(--line-height-body);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    font-weight: normal;
+    /* background-color: #ffffff; */
+    color: #040316; 
+}
+
+/* Ensuring body uses full width/height and has proper overflow control */
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+a {
+  text-decoration: none; /* Remove underlines */
+  color: inherit; /* Link inherits text color */
+}
+
+ul, ol {
+  list-style: none; /* Remove default bullet points */
+}
+
+
+::selection {
+  background-color: #b3d4fc; /* Highlight background */
+  color: #000; /* Highlight text */
+}
+
+/* Improve accessibility for buttons */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Prevent inline gaps */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Headings */
+h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-heading);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-heading);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+}
+
+h6 {
+    font-size: var(--font-size-h6);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: var(--line-height-heading);
+    font-weight: normal;
+}
+
+/* Paragraph */
+p {
+    font-size: var(--font-size-normal);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Icons */
+.icon-small {
+    width: var(--icon-size-small);
+    height: var(--icon-size-small);
+}
+.icon-medium {
+    width: var(--icon-size-medium);
+    height: var(--icon-size-medium);
+}
+.icon-large {
+    width: var(--icon-size-large);
+    height: var(--icon-size-large);
+}
+
+/* Buttons */
+.button-small {
+    height: var(--button-height-small);
+    padding: var(--button-padding-small);
+    border-radius: var(--border-radius-small);
+}
+
+.button-medium {
+    height: var(--button-height-medium);
+    padding: var(--button-padding-medium);
+    border-radius: var(--border-radius-medium);
+}
+
+.button-large {
+    height: var(--button-height-large);
+    padding: var(--button-padding-large);
+    border-radius: var(--border-radius-large);
+}
+
+/* Input Fields */
+input,
+select,
+textarea {
+    font-size: var(--font-size-normal);
+    padding: var(--spacing-small);
+    border-radius: var(--border-radius-small);
+    border: 1px solid #ccc;
+    /* margin-bottom: var(--spacing-medium); */
+}
+
+/* Margin and Padding Utilities */
+.mt-small {
+  margin-top: var(--spacing-small);
+}
+.mt-medium {
+  margin-top: var(--spacing-medium);
+}
+.mt-large {
+  margin-top: var(--spacing-large);
+}
+
+.mb-small {
+  margin-bottom: var(--spacing-small);
+}
+.mb-medium {
+  margin-bottom: var(--spacing-medium);
+}
+.mb-large {
+  margin-bottom: var(--spacing-large);
+}
+
+.pt-small {
+  padding-top: var(--spacing-small);
+}
+.pt-medium {
+  padding-top: var(--spacing-medium);
+}
+.pt-large {
+  padding-top: var(--spacing-large);
+}
+
+/* Favicon */
+.favicon {
+  width: 32px;
+  height: 32px;
+}
+
+/* ------------------------- Company full wide logo ------------------------- */
+  .companyFullWideLogo {
+    width: 180px;
+  }
