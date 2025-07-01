@@ -21,6 +21,7 @@ const Transaction = () => {
   // Render search form fields
   const renderSearchFields = () => (
     <div className={styles.searchContainer}>
+      {/* Row 1 */}
       <div className={styles.flexRow}>
         <div className={styles.inputWrapperTxnId}>
           <Input className={styles.inputTxnId} placeholder="Txn ID/Merchant Txn ID/Email" />
@@ -35,6 +36,7 @@ const Transaction = () => {
           <Dropdown className={styles.inputGateway} options={gatewayOptions} placeholder="Select Payment Gateway" />
         </div>
       </div>
+      {/* Row 2 */}
       <div className={styles.flexRow}>
         <div className={styles.inputWrapperStartDate}>
           <Input className={styles.inputStartDate} type="date" placeholder="Start date" />
@@ -46,13 +48,10 @@ const Transaction = () => {
           <Input className={styles.inputEndDate} type="date" placeholder="End date" />
         </div>
         <div className={styles.inputWrapperQuickSearch}>
-          <label className={styles.quickSearchLabel}>Quick Search</label>
           <Dropdown className={styles.inputQuickSearch} options={quickSearchOptions} placeholder="Quick Search" />
         </div>
-        <div className={styles.inputWrapperMID}>
-          <Dropdown className={styles.inputMID} options={midOptions} placeholder="Select MID" />
-        </div>
       </div>
+      {/* Row 3 */}
       <div className={styles.flexRow}>
         <div className={styles.inputWrapperCountry}>
           <Dropdown className={styles.inputCountry} options={countryOptions} placeholder="Select Country" />
@@ -63,7 +62,22 @@ const Transaction = () => {
         <div className={styles.inputWrapperCardNo}>
           <Input className={styles.inputCardNo} placeholder="Card No." />
         </div>
+        <div className={styles.inputWrapperMID}>
+          <Dropdown className={styles.inputMID} options={midOptions} placeholder="Select MID" />
+        </div>
       </div>
+      {/* Row 4 */}
+      <div className={styles.flexRow}>
+        <div className={styles.emailMessageWrapper}>
+          <Input className={styles.inputEmail} placeholder="Email" />
+        </div>
+        {/* <div className={styles.spacer} />
+        <div className={styles.spacer} /> */}
+        <div className={styles.emailMessageWrapper}>
+          <Input className={styles.inputMessage} placeholder="Message" />
+        </div>
+      </div>
+      {/* Action Row */}
       <div className={styles.flexRow}>
         <button className={styles.searchBtn}><span role="img" aria-label="search">🔍</span> Search Now</button>
         <button className={styles.clearBtn}>Clear</button>
