@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Icon from "../../media/icon/icons";
 
 const Calendar = () => {
+    const currentYear = new Date().getFullYear();
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
     const [selectedMonth, setSelectedMonth] = useState(startDate.getMonth());
-    const [selectedYear, setSelectedYear] = useState(startDate.getFullYear());
+    const [selectedYear, setSelectedYear] = useState(currentYear);
 
     const renderDays = (month, year) => {
         const date = new Date(year, month, 1);
@@ -60,8 +61,8 @@ const Calendar = () => {
                             onChange={(e) => setSelectedYear(parseInt(e.target.value, 10))}
                         >
                             {Array.from({ length: 10 }).map((_, i) => (
-                                <option key={i} value={2025 - i}>
-                                    {2025 - i}
+                                <option key={i} value={currentYear - i}>
+                                    {currentYear - i}
                                 </option>
                             ))}
                         </select>
@@ -126,8 +127,8 @@ const Calendar = () => {
                             onChange={(e) => setSelectedYear(parseInt(e.target.value, 10))}
                         >
                             {Array.from({ length: 10 }).map((_, i) => (
-                                <option key={i} value={2025 - i}>
-                                    {2025 - i}
+                                <option key={i} value={currentYear - i}>
+                                    {currentYear - i}
                                 </option>
                             ))}
                         </select>

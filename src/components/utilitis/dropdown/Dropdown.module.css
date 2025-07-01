@@ -72,7 +72,8 @@
 }
 
 .selectedText.placeholder {
-  color: #9ca3af;
+  color: #888;
+  font-size: 14px;
   font-weight: 400;
 }
 

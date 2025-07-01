@@ -71,10 +71,10 @@ const Transaction = () => {
           <Dropdown className={styles.inputStatus} options={statusOptions} placeholder="Select Status" />
         </div>
         <div className={styles.inputWrapperMerchant + ' ' + styles.ml18}>
-          <Dropdown className={styles.inputMerchant} options={merchantOptions} placeholder="Select Merchant" />
+          <Dropdown className={styles.inputMerchant} options={merchantOptions} placeholder="Select Client" />
         </div>
         <div className={styles.inputWrapperGateway + ' ' + styles.ml18}>
-          <Dropdown className={styles.inputGateway} options={gatewayOptions} placeholder="Select Payment Gateway" />
+          <Dropdown className={styles.inputGateway} options={gatewayOptions} placeholder="Select Acquirer" />
         </div>
       </div>
       {/* Row 2 */}
@@ -142,7 +142,7 @@ const Transaction = () => {
             <Dropdown className={styles.inputCardType} options={cardTypeOptions} placeholder="Select Card Type" />
           </div>
           <div className={styles.inputWrapperCardNo + ' ' + styles.ml18}>
-            <TextInput placeholder="Card No." onChange={() => {}} />
+            <Dropdown className={styles.inputCurrency} options={['USD', 'EUR', 'INR']} placeholder="Select Currency" />
           </div>
           <div className={styles.inputWrapperMID + ' ' + styles.ml18}>
             <Dropdown className={styles.inputMID} options={midOptions} placeholder="Select MID" />
@@ -151,7 +151,7 @@ const Transaction = () => {
         {/* Row 4: Email below Country, Message below Card Type, other columns empty for alignment */}
         <div className={styles.flexRow}>
           <div className={styles.smallInputWrapper}>
-            <TextInput placeholder="Email" onChange={() => {}} />
+            <TextInput placeholder="Enter first 6 digit or last 4 digit" onChange={() => {}} />
           </div>
           <div className={styles.smallInputWrapper + ' ' + styles.ml18}>
             <TextInput placeholder="Message" onChange={() => {}} />
