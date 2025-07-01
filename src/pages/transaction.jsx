@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import styles from './transaction.module.css';
@@ -6,6 +6,7 @@ import Dropdown from '../components/utilitis/dropdown/Dropdown';
 import { Input } from '../components/utilitis/Input';
 
 const Transaction = () => {
+  const [showMore, setShowMore] = useState(false);
   // Simulate role (replace with real sessionStorage in real app)
   const role = sessionStorage.getItem('role') || 'client';
 
@@ -51,36 +52,47 @@ const Transaction = () => {
           <Dropdown className={styles.inputQuickSearch} options={quickSearchOptions} placeholder="Quick Search" />
         </div>
       </div>
-      {/* Row 3 */}
-      <div className={styles.flexRow}>
-        <div className={styles.inputWrapperCountry}>
-          <Dropdown className={styles.inputCountry} options={countryOptions} placeholder="Select Country" />
+      {/* Animated Rows: 3rd and 4th rows */}
+      <div className={`${styles.animatedRows} ${showMore ? styles.show : styles.hide}`}>
+        {/* Row 3 */}
+        <div className={styles.flexRow}>
+          <div className={styles.inputWrapperCountry}>
+            <Dropdown className={styles.inputCountry} options={countryOptions} placeholder="Select Country" />
+          </div>
+          <div className={styles.inputWrapperCardType}>
+            <Dropdown className={styles.inputCardType} options={cardTypeOptions} placeholder="Select Card Type" />
+          </div>
+          <div className={styles.inputWrapperCardNo}>
+            <Input className={styles.inputCardNo} placeholder="Card No." />
+          </div>
+          <div className={styles.inputWrapperMID}>
+            <Dropdown className={styles.inputMID} options={midOptions} placeholder="Select MID" />
+          </div>
         </div>
-        <div className={styles.inputWrapperCardType}>
-          <Dropdown className={styles.inputCardType} options={cardTypeOptions} placeholder="Select Card Type" />
-        </div>
-        <div className={styles.inputWrapperCardNo}>
-          <Input className={styles.inputCardNo} placeholder="Card No." />
-        </div>
-        <div className={styles.inputWrapperMID}>
-          <Dropdown className={styles.inputMID} options={midOptions} placeholder="Select MID" />
-        </div>
-      </div>
-      {/* Row 4 */}
-      <div className={styles.flexRow}>
-        <div className={styles.emailMessageWrapper}>
-          <Input className={styles.inputEmail} placeholder="Email" />
-        </div>
-        {/* <div className={styles.spacer} />
-        <div className={styles.spacer} /> */}
-        <div className={styles.emailMessageWrapper}>
-          <Input className={styles.inputMessage} placeholder="Message" />
+        {/* Row 4 */}
+        <div className={styles.flexRow}>
+          <div className={styles.emailMessageWrapper}>
+            <Input className={styles.inputEmail} placeholder="Email" />
+          </div>
+          <div className={styles.emailMessageWrapper}>
+            <Input className={styles.inputMessage} placeholder="Message" />
+          </div>
         </div>
       </div>
       {/* Action Row */}
       <div className={styles.flexRow}>
-        <button className={styles.searchBtn}><span role="img" aria-label="search">🔍</span> Search Now</button>
-        <button className={styles.clearBtn}>Clear</button>
+        <div className={styles.showMoreLessWrapper}>
+          <button
+            className={styles.showMoreBtn}
+            onClick={() => setShowMore((prev) => !prev)}
+          >
+            {showMore ? 'Show Less ▲' : 'Show More ▼'}
+          </button>
+        </div>
+        <div className={styles.actionButtonsWrapper}>
+          <button className={styles.searchBtn}><span role="img" aria-label="search">🔍</span> Search Now</button>
+          <button className={styles.clearBtn}>Clear</button>
+        </div>
       </div>
     </div>
   );

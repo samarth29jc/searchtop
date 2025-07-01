@@ -198,4 +198,49 @@
   border-radius: 8px;
   font-size: 1rem;
   background: #fff;
+}
+
+.animatedRows {
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.animatedRows.show {
+  max-height: 500px; /* adjust as needed */
+  opacity: 1;
+  pointer-events: auto;
+}
+.animatedRows.hide {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.showMoreLessWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.showMoreBtn {
+  background: none;
+  border: none;
+  color: #003366;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  transition: color 0.2s;
+}
+.showMoreBtn:hover {
+  color: #007bff;
+}
+
+.actionButtonsWrapper {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
 } 
