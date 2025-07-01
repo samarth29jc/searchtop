@@ -54,7 +54,7 @@ const NotificationPopup = ({
 
   return (
     <>
-      <div className="notification-overlay" onClick={onClose} />
+      <div className="notification-overlay" onClick={e => { e.stopPropagation(); onClose(); }} />
       <div className={`notification-popup ${className} ${isOpen ? 'open' : 'close'}`}>
         <div className="notification-header">
           <div className="notification-title">
@@ -65,7 +65,7 @@ const NotificationPopup = ({
             </div>
             <span>Notifications</span>
           </div>
-          <button className="close-btn" onClick={onClose}>
+          <button className="close-btn" onClick={e => { e.stopPropagation(); onClose(); }}>
             <Icon name='cross' width={20} height={20}></Icon>
           </button>
         </div>

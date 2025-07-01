@@ -28,8 +28,9 @@
 
 .flexRow {
   display: flex;
-  gap: 18px;
+  /* gap: 18px; */
   margin-bottom: 18px;
+  position: relative;
 }
 
 .inputWrapperTxnId { flex: 1; }
@@ -79,14 +80,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 40px;
+  flex: 0 0 56px;
+  height: 48px;
 }
 .inputArrow {
-  font-size: 1.5rem;
-  color: #003366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #003366;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
   font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  padding: 0;
 }
-.inputWrapperEndDate { flex: 1; }
+.inputArrow:hover {
+  background: #00264c;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.inputWrapperEndDate { flex: 0.75; }
 .inputEndDate {
   width: 100%;
   /* padding: 12px 14px; */
@@ -149,7 +168,7 @@
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 5px 5px 7px 7px;
+  padding: 5px 5px 10px 7px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -158,6 +177,8 @@
   gap: 8px;
   margin-right: 12px;
   transition: background 0.2s;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .searchBtn:hover {
   background: #00264c;
@@ -178,12 +199,10 @@
 }
 
 .emailMessageWrapper {
-  flex-basis: 25%;
- 
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  
   padding: 0;
   margin: 0;
   background: none;
@@ -192,8 +211,7 @@
 
 .inputEmail,
 .inputMessage {
-  width: 273px;
- 
+  width: 100%;
   border: 1px solid #dbe2ea;
   border-radius: 8px;
   font-size: 1rem;
@@ -201,7 +219,7 @@
 }
 
 .animatedRows {
-  overflow: hidden;
+  overflow: visible;
   transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s;
   max-height: 0;
   opacity: 0;
@@ -243,4 +261,46 @@
   flex: 1;
   justify-content: flex-end;
   align-items: center;
+}
+
+.ml18 {
+  margin-left: 18px;
 } 
+
+.ml10 {
+  margin-left: 9px;
+} 
+
+.inputWrapperCalendarIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.2;
+}
+
+.smallInputWrapper {
+  width: 273px;
+  min-width: 0;
+}
+
+.dateRangeWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.dateRangeContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.calendarPopupBelow {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  /* margin-top: 8px; */
+}
+

@@ -5,6 +5,8 @@ import '../styles/component.css';
 import { Input } from './utilitis/Input.jsx';
 import AxipaysLogo from '../media/image/axi_wideLogo.png';
 import BoyAvtar from '../media/image/profileimage.jpg';
+import NotificationPopup from './NotificationPopup/NotificationPopup';
+import ProfileDropdown from './profileDropdown/ProfileDropdown';
 
 function Header() {
     const userName = sessionStorage.getItem("userName");
@@ -17,6 +19,8 @@ function Header() {
     const [searchQuery, setSearchQuery] = useState("");
     const [dropdownResults, setDropdownResults] = useState([]);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // ✅ mobile toggle
+    const [isNotificationOpen, setNotificationOpen] = useState(false);
+    const [isProfileOpen, setProfileOpen] = useState(false);
 
     const sampleData = [
         "Manage Settlement",
@@ -108,43 +112,37 @@ function Header() {
                         )}
                     </div>
                     <div className='header-functionality'>
+                        {/* Notification Popup */}
                         <div className='header-notification'>
-                            {userRole !== "firstUser" && userRole !== "client" && (
-                                <div className='ic' onClick={() => {
-                                    if (userRole !== "firstUser" && userRole !== "client" && userRole !== "admin") {
-                                        openModal('Notification');
-                                    }
-                                }}>
-                                    <Icon name="bell" width={25} height={25} color="#003366" />
-                                </div>
-                            )}
+                            <div className='ic' onClick={() => setNotificationOpen(true)}>
+                                <Icon name="bell" width={25} height={25} color="#003366" />
+                            </div>
+                            <NotificationPopup
+                                isOpen={isNotificationOpen}
+                                onClose={() => setNotificationOpen(false)}
+                                notifications={[]}
+                                activeTab="unread"
+                                onTabChange={() => {}}
+                            />
                         </div>
-
-                        <div className='profileSection' onClick={() => openModal('Profile')}>
-                            <div className='img-section'>
-                                {userRole === "admin" ? (
-                                    <img src={BoyAvtar} alt="avatar" />
-                                ) : (
-                                    <div>
-                                        {userName ? userName.charAt(0).toUpperCase() : "U"}
-                                    </div>
-                                )}
+                        {/* Profile Dropdown */}
+                        <div className='profileSection'>
+                            <div className='img-section' onClick={() => setProfileOpen(true)}>
+                                <img src={BoyAvtar} alt="avatar" />
                             </div>
-                            <div className='details-section'>
-                                <p className='userName'>{userName}</p>
-                                <p className='userRole'>{email}</p>
-                            </div>
-                            <div className='dropDown-section'>
-                                <div className='ic'>
-                                    <Icon
-                                        name={isFlip ? "keyboard_arrow_down" : "keyboard_arrow_up"}
-                                        width={20}
-                                        height={20}
-                                        color="#003366"
-                                        className={`flip-icon ${isFlip ? 'flip-up' : 'flip-down'}`}
-                                    />
-                                </div>
-                            </div>
+                            <Icon
+                                name="keyboard_arrow_down"
+                                width={20}
+                                height={20}
+                                color="#003366"
+                                onClick={() => setProfileOpen(true)}
+                                style={{ cursor: 'pointer' }}
+                            />
+                            <ProfileDropdown
+                                isOpen={isProfileOpen}
+                                onClose={() => setProfileOpen(false)}
+                                user={{ name: userName, email: email }}
+                            />
                         </div>
                     </div>
                 </div>
